@@ -1,0 +1,33 @@
+{
+  "name": "url-shortener-server",
+  "version": "1.0.0",
+  "description": "Backend web application to handle api request",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon start",
+    "test": "jest --testEnvironment=node"
+  },
+  "keywords": [
+    "server",
+    "node.js",
+    "express",
+    "mongodb",
+    "rest",
+    "api"
+  ],
+  "author": "Cyrus Saw",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mongoose": "^6.4.1",
+    "nanoid-esm": "^2.1.0-esm.4"
+  },
+  "devDependencies": {
+    "@shelf/jest-mongodb": "^3.0.2",
+    "jest": "^28.1.2",
+    "jest-mock-req-res": "^1.0.2",
+    "mongodb-memory-server": "^8.7.2"
+  }
+}

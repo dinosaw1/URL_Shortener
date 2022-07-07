@@ -1,0 +1,22 @@
+<div>
+    <form class="form">
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-form-field class="full-width" appearance="fill">
+                <mat-label>Enter the long URL that you wish to shorten</mat-label>
+                <input matInput name="long-url-input" [formControl]="urlFormControl"
+                    placeholder="Eg. https://www.google.com" (focusout)="onUrlFocusOut($event)"
+                    (focus)="markTouched()">
+                <mat-error *ngIf="urlFormControl.invalid">{{inputErrorMsg}}</mat-error>
+            </mat-form-field>
+
+            <button mat-raised-button id="create-url-btn" name="create-url-btn" color="primary" [disabled]="urlFormControl.value && urlFormControl.invalid"
+                (click)="createShortURL()">Create Short
+                URL</button>
+        </mat-form-field>
+        <mat-form-field *ngIf="shortURL" class="full-width" appearance="outline">
+            <mat-label>Shorten URL:</mat-label>
+            <input matInput readonly name="short-url-input" [ngModel]="shortURL">
+        </mat-form-field>
+    </form>
+
+</div>
